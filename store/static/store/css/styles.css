@@ -1,0 +1,84 @@
+/* Custom Camo Pattern Overlay Utility */
+.bg-camo {
+    background-color: #3a492b;
+    background-image: 
+        radial-gradient(circle at 10% 20%, #485c33 10%, transparent 10.5%),
+        radial-gradient(circle at 80% 50%, #283121 15%, transparent 15.5%),
+        radial-gradient(circle at 40% 80%, #5c7440 12%, transparent 12.5%);
+    background-size: 100px 100px;
+}
+
+/* Notification Animation */
+.notification {
+    animation: fadeInDown 0.3s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cart Badge Animation */
+.cart-badge {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+}
+
+/* Product Card Hover Effects */
+.product-card {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-image {
+    transition: transform 0.7s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+/* Quick Action Buttons */
+.quick-action-btn {
+    transition: all 0.3s ease;
+    transform: translateY(16px);
+    opacity: 0;
+}
+
+.product-card:hover .quick-action-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Active Navigation Link */
+.nav-link.active,
+.mobile-nav-link.active {
+    color: #FF9933;
+}
+
+.mobile-nav-link.active {
+    background-color: #3a492b;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
